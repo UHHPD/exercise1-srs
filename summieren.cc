@@ -36,7 +36,7 @@ my_output_file.open("output_data"); // open the file named "output_data"
       //cout  <<  var_one   << ' ' <<  var_two  << endl; //print number pair in terminal
       sum = var_one + var_two; //add the number pair and assign value to previously initialised variable sum
       my_output_file << sum << endl; //saves sums in output file
-      cout <<  sum << endl; //prints sum in terminal
+      //cout <<  sum << endl; //prints sum in terminal
       n++; //increment counter by one
     }
 
