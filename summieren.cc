@@ -33,7 +33,7 @@ my_output_file.open("output_data"); // open the file named "output_data"
     while (n<234){     //loop over file 234 times for each number pair
 
       my_input_file >> var_one >> var_two; //insert numbers from file into two variables, var_one and var_two
-      cout  <<  var_one   << ' ' <<  var_two  << endl; //print number pair in terminal
+      //cout  <<  var_one   << ' ' <<  var_two  << endl; //print number pair in terminal
       sum = var_one + var_two; //add the number pair and assign value to previously initialised variable sum
       my_output_file << sum << endl; //saves sums in output file
       cout <<  sum << endl; //prints sum in terminal
