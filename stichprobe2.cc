@@ -63,20 +63,29 @@ Compute Variance of every 9 numbers and output into varianzen
 
       input_file_two >> mean_mittelwerte;
 
-      while (k<234) {
+      while (k<9) {
         input_file_one >> sum;
         variance_diff_sq = pow(sum - mean_mittelwerte,2); // (a- a_bar)^2
-        variance_sum = variance_sum + variance_diff_sq; //sum (a-a_bar)^2
-        float variance = variance_sum/(k+1);
+        variance_sum += variance_diff_sq; //sum (a-a_bar)^2
 
+
+/*
         if ((k+1)%9==0){
           //variance_diff_sq = pow(sum - mean_mittelwerte,2); // (a- a_bar)^2
           //variance_sum = variance_sum + variance_diff_sq; //sum (a-a_bar)^2
           //int variance = variance_sum/(n+1);
+          float variance = variance_sum/9;
           output_file_two << variance << endl;
+          variance_sum = 0;
+
         }
+
+        */
         k++;
       }
+      float variance = variance_sum/9;
+      output_file_two << variance << endl;
+      variance_sum = 0;
       j++;
     }
 
