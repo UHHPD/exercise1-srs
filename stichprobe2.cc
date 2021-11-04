@@ -111,14 +111,14 @@ compute mean of 26 variances and sum_means
     }
 
 
-    cout<<sum_all_means<<endl;
-    cout << sum_all_variances<<endl;
+    //cout<<sum_all_means<<endl;
+    //cout << sum_all_variances<<endl;
 
     int mittelwerte_mean = sum_all_means/26;
     int varianzen_mean = sum_all_variances/26;
 
-    cout << mittelwerte_mean << endl;
-    cout << varianzen_mean << endl;
+    //cout << mittelwerte_mean << endl;
+    //cout << varianzen_mean << endl;
 
 
   }

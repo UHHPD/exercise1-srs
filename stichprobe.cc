@@ -26,7 +26,7 @@ int main () {
 
     int mean = sum_all/count; //mean of total sum of all values in datensumme
 
-    cout << "The mean is " << mean << endl; //prints mean
+    cout << mean << endl; //prints mean
 
     my_input_file.close(); //closes input file
 
@@ -45,11 +45,11 @@ int main () {
     }
 
     int variance = variance_sum/n; //compute variance
-    cout << "The variance is " << variance <<endl; //prints variance
+    cout  << variance << endl; //prints variance
 
     int st_dev = sqrt(variance); //computes standard deviation
 
-    cout << "The standard Deviation is " << st_dev <<endl; //prints standard deviation
+    cout  << st_dev <<endl; //prints standard deviation
 
     my_input_file.close(); //close input file
 
