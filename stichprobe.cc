@@ -11,9 +11,9 @@ int main () {
 
   if (my_input_file.is_open()) {
 
-    float sum;
+    double sum;
     int count = 0;
-    float sum_all = 0;
+    double sum_all = 0;
 
 
 
@@ -24,17 +24,17 @@ int main () {
       count++; //increment counter
     }
 
-    float mean = sum_all/count; //mean of total sum of all values in datensumme
+    double mean = sum_all/count; //mean of total sum of all values in datensumme
 
-    cout << mean << endl; //prints mean
+    cout << "mean1: " << mean << endl; //prints mean
 
     my_input_file.close(); //closes input file
 
     ifstream my_input_file("datensumme.txt"); //re-open input file
 
     int n = 0; //new counter
-    float variance_sum = 0; // to sum all (a-a_bar)^2
-    float variance_diff_sq = 0; // (a - a_bar)^2
+    double variance_sum = 0; // to sum all (a-a_bar)^2
+    double variance_diff_sq = 0; // (a - a_bar)^2
 
     while (n<234){
 
@@ -44,12 +44,12 @@ int main () {
       n++;
     }
 
-    float variance = variance_sum/n; //compute variance
-    cout  << variance << endl; //prints variance
+    double variance = variance_sum/n; //compute variance
+    cout << "var1: " << variance << endl; //prints variance
 
-    float st_dev = sqrt(variance); //computes standard deviation
+    double st_dev = sqrt(variance); //computes standard deviation
 
-    cout  << st_dev <<endl; //prints standard deviation
+    cout << "st dev1: " << st_dev <<endl; //prints standard deviation
 
     my_input_file.close(); //close input file
 

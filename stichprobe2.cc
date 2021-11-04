@@ -89,11 +89,11 @@ compute mean of 26 variances and sum_means
     ifstream input_file_three ("varianzen.txt");
     ifstream input_file_four ("mittelwerte.txt");
 
-    float sum_means;
-    float sum_all_means;
-    float sum_variances;
-    float sum_all_variances;
-    float l=0;
+    double sum_means;
+    double sum_all_means;
+    double sum_variances;
+    double sum_all_variances;
+    double l=0;
 
     while (l<26) {
 
@@ -113,8 +113,14 @@ compute mean of 26 variances and sum_means
     double mittelwerte_mean = sum_all_means/26;
     double varianzen_mean = sum_all_variances/26;
 
-    //cout << mittelwerte_mean << endl;
-    //cout << varianzen_mean << endl;
+    cout << "mean2: " << mittelwerte_mean << endl;
+    cout << "var2: " << varianzen_mean << endl;
+
+    mittelwerte_mean = sum_all_means/(26-1);
+    varianzen_mean = sum_all_variances/(26-1);
+
+    cout << "mean2 with bessels correction: " << mittelwerte_mean << endl;
+    cout << "var2 with bessels correction: " << varianzen_mean << endl;
 
 
   }
