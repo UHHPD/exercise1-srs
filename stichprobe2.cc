@@ -55,35 +55,21 @@ Compute Variance of every 9 numbers and output into varianzen
 
     int j = 0; //new counter
     int k = 0;
-    float mean_mittelwerte;
-    float variance_sum = 0; // to sum all (a-a_bar)^2
-    float variance_diff_sq = 0; // (a - a_bar)^2
+    double mean_mittelwerte;
+    double variance_sum = 0; // to sum all (a-a_bar)^2
+    double variance_diff_sq = 0; // (a - a_bar)^2
 
     while (j<26) {
 
       input_file_two >> mean_mittelwerte;
 
-      while (k<9) {
+      for (int k=0; k<9; k++) {
         input_file_one >> sum;
         variance_diff_sq = pow(sum - mean_mittelwerte,2); // (a- a_bar)^2
         variance_sum += variance_diff_sq; //sum (a-a_bar)^2
-
-
-/*
-        if ((k+1)%9==0){
-          //variance_diff_sq = pow(sum - mean_mittelwerte,2); // (a- a_bar)^2
-          //variance_sum = variance_sum + variance_diff_sq; //sum (a-a_bar)^2
-          //int variance = variance_sum/(n+1);
-          float variance = variance_sum/9;
-          output_file_two << variance << endl;
-          variance_sum = 0;
-
-        }
-
-        */
-        k++;
       }
-      float variance = variance_sum/9;
+
+      double variance = variance_sum/9;
       output_file_two << variance << endl;
       variance_sum = 0;
       j++;
@@ -124,11 +110,11 @@ compute mean of 26 variances and sum_means
     //cout<<sum_all_means<<endl;
     //cout << sum_all_variances<<endl;
 
-    float mittelwerte_mean = sum_all_means/26;
-    float varianzen_mean = sum_all_variances/26;
+    double mittelwerte_mean = sum_all_means/26;
+    double varianzen_mean = sum_all_variances/26;
 
-    cout << mittelwerte_mean << endl;
-    cout << varianzen_mean << endl;
+    //cout << mittelwerte_mean << endl;
+    //cout << varianzen_mean << endl;
 
 
   }
