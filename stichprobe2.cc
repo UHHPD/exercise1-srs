@@ -25,13 +25,14 @@ Compute mean of every 9 numbers of datensumme and store in mittelwerte
 
     while (i < 234){
       my_input_file >> sum;
-      sum_all = sum + sum_all; //sum of all the sums in datensumme
+      sum_all += sum; //sum of all the sums in datensumme
 
       if ((i+1)%9==0){
         //my_input_file >> sum;
         //sum_all = sum + sum_all; //sum of all the sums in datensumme
-        float mean = sum_all/(i);
+        float mean = sum_all/9;
         output_file_one<< mean<< endl;
+        sum_all =0;
 
       }
       i++; //increment counter
