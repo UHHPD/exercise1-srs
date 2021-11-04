@@ -18,9 +18,9 @@ Compute mean of every 9 numbers of datensumme and store in mittelwerte
 
   if (my_input_file.is_open()) {
 
-    int sum;
+    float sum;
     int i = 0;
-    int sum_all = 0;
+    float sum_all = 0;
 
 
     while (i < 234){
@@ -30,7 +30,7 @@ Compute mean of every 9 numbers of datensumme and store in mittelwerte
       if ((i+1)%9==0){
         //my_input_file >> sum;
         //sum_all = sum + sum_all; //sum of all the sums in datensumme
-        int mean = sum_all/(i);
+        float mean = sum_all/(i);
         output_file_one<< mean<< endl;
 
       }
@@ -54,9 +54,9 @@ Compute Variance of every 9 numbers and output into varianzen
 
     int j = 0; //new counter
     int k = 0;
-    int mean_mittelwerte;
-    int variance_sum = 0; // to sum all (a-a_bar)^2
-    int variance_diff_sq = 0; // (a - a_bar)^2
+    float mean_mittelwerte;
+    float variance_sum = 0; // to sum all (a-a_bar)^2
+    float variance_diff_sq = 0; // (a - a_bar)^2
 
     while (j<26) {
 
@@ -66,7 +66,7 @@ Compute Variance of every 9 numbers and output into varianzen
         input_file_one >> sum;
         variance_diff_sq = pow(sum - mean_mittelwerte,2); // (a- a_bar)^2
         variance_sum = variance_sum + variance_diff_sq; //sum (a-a_bar)^2
-        int variance = variance_sum/(k+1);
+        float variance = variance_sum/(k+1);
 
         if ((k+1)%9==0){
           //variance_diff_sq = pow(sum - mean_mittelwerte,2); // (a- a_bar)^2
@@ -93,11 +93,11 @@ compute mean of 26 variances and sum_means
     ifstream input_file_three ("varianzen.txt");
     ifstream input_file_four ("mittelwerte.txt");
 
-    int sum_means;
-    int sum_all_means;
-    int sum_variances;
-    int sum_all_variances;
-    int l=0;
+    float sum_means;
+    float sum_all_means;
+    float sum_variances;
+    float sum_all_variances;
+    float l=0;
 
     while (l<26) {
 
@@ -114,11 +114,11 @@ compute mean of 26 variances and sum_means
     //cout<<sum_all_means<<endl;
     //cout << sum_all_variances<<endl;
 
-    int mittelwerte_mean = sum_all_means/26;
-    int varianzen_mean = sum_all_variances/26;
+    float mittelwerte_mean = sum_all_means/26;
+    float varianzen_mean = sum_all_variances/26;
 
-    //cout << mittelwerte_mean << endl;
-    //cout << varianzen_mean << endl;
+    cout << mittelwerte_mean << endl;
+    cout << varianzen_mean << endl;
 
 
   }
